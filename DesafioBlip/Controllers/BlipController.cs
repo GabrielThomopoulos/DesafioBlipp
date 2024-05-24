@@ -6,9 +6,7 @@ using System.Net;
 
 namespace DesafioBlip.Controllers
 {
-    /// <summary>
-    /// Redirect user controller
-    /// </summary>
+
     [Route("api/[controller]")]
     [ApiController]
     public class BlipController : ControllerBase
@@ -27,9 +25,6 @@ namespace DesafioBlip.Controllers
             _repositoryFacade = facade;
         }
 
-        /// <summary>
-        /// Get the oldest repositories from Blip´s GitHub
-        /// </summary>
 
         [HttpGet]
         public IActionResult GetRepositoryAsync()
@@ -144,9 +139,6 @@ namespace DesafioBlip.Controllers
     {
 
         #region Public Methods
-        /// <summary>
-        /// Takes information from Blip´s oldest repositories.
-        /// </summary>
         [Get]
         List<UsuarioModel> GetGitHubUrl();
 
@@ -155,10 +147,6 @@ namespace DesafioBlip.Controllers
     public interface IBlipFacade
     {
         #region Public Methods
-
-        /// <summary>
-        /// Takes information from Blip´s oldest reporitories.
-        /// </summary>
         List<UsuarioModel> GetRepositoriesAsync();
 
         #endregion Public Methods
